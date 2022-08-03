@@ -1,0 +1,247 @@
+<html>
+
+<head>
+	<title>Payment</title>
+	<!-- For Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&family=Russo+One&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style/styles.css">
+	<script src="payment.js"></script>
+	
+    <!--For Tailwind CSS -->
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<style>
+		
+		.p1,
+		.p2 {
+			display: none;
+		}
+
+		body {
+			text-align: center;
+		}
+
+		.st {
+			display: inline-block;
+			text-align: left;
+			font-size: 25px;
+		}
+
+		input {
+			font-size: 20px;
+		}
+
+		fieldset {
+			float: center;
+			width: 0;
+			border-radius: 8px;
+		}
+
+		.navbar ul li:hover {
+			background-color: transparent;
+		}
+
+		.navbar ul li a:hover {
+			background-color: #0c0f6c;
+			border-radius: 50px;
+			transition: 0.5s all;
+			box-shadow: 0 0 9px white;
+		}
+
+		.navbar-menu li a {
+			padding: 0px 10px;
+		}
+
+		.navbar ul li a h4 {
+			font-family: 'Bree Serif', serif;
+			font-size: 20px;
+			color: white;
+			line-height: 30px;
+		}
+
+		.navbar ul li a h4:hover {
+			color: white;
+		}
+
+		.main-heading {
+			animation: move 1s ease infinite;
+		}
+
+		.footer-brand .footer-heading {
+			font-family: 'Russo One', sans-serif;
+
+		}
+
+		@keyframes move {
+			0% {
+				transform: rotateZ(-6deg);
+			}
+
+			50% {
+				transform: rotateZ(5deg);
+			}
+
+			100% {
+				transform: rotateZ(-6deg);
+			}
+		}
+	</style>
+</head>
+
+<body style="background-color:gainsboro;">
+	<div style="height: 15em;
+	overflow: hidden;
+	">
+  
+		  <div style="
+	display: block;
+	position: relative;
+	top: -195%;
+	left: -25%;
+	height: 219%;
+	width: 200%;
+	background: #0c0f6c;
+	box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+	transform: rotateZ(356deg) skew(-6deg);
+	border: 2px solid white;
+	">
+		  </div>
+		  <a href="index.php">
+			  <h1 class="main-heading" style="position: absolute;
+	  top: 1vmax;
+	  left: 2vmax;
+	  padding: 0;
+	  margin: 0;
+	  color: white;
+	  font-size: 7em;
+	  font-family: 'Russo One', sans-serif;
+	  transform: rotateZ(-6deg);
+	  text-shadow: 2px 2px 0px #ef4131, 4px 4px 0px #d51123, 6px 6px 0px black, 8px 8px 0px #21221d, 10px 10px 0px #e90404;">MV Time</h1>
+		  </a>
+	  </div>
+	<div class="navbar-container">
+		<nav class="navbar">
+			<ul class="navbar-menu">
+				<li><a href="index.php">
+						<h4 style="color:black;">Home</h4>
+					</a></li>
+				<li><a href="schedule.php">
+						<h4 style="color:black;">Schedule</h4>
+					</a></li>
+
+				<li><a href="#">
+						<h4 style="color:black;">Team</h4>
+					</a></li>
+				<li><a href="contact-us.php">
+						<h4 style="color:black;">Contact</h4>
+					</a></li>
+			</ul>
+		</nav>
+	</div>
+	<center>
+		<fieldset>
+			<legend>
+				<h2 style="color:red;">Payment</h2>
+			</legend>
+			<div class="st">
+				<form>
+					<input type="radio" name="payment" onclick="Paytm()" />Paytm </t><br />
+					<input type="radio" name="payment" onclick="Debit()">Debit Card <br /></input>
+					<input type="radio" name="payment" onclick="Debit()">Credit card <br /></input>
+					<input type="radio" name="payment" onclick="Paytm()">PhonePe <br /></input>
+				</form>
+			</div>
+			<div class="p1" id="p1">
+				<form name="paytm" action="reciept.php?id=71" onsubmit="return validateMN()">
+					<center>
+						<fieldset>
+							<br />
+							<input type="number" placeholder="Mobile number" id="mn"></input><br /><br />
+							<input type="hidden" name="con" id="conn" value="" />
+							<input type="submit" value="Pay" />
+						</fieldset>
+					</center>
+				</form>
+			</div>
+
+			<div class="p2" id="p2">
+				<form name="debit" action="reciept.php" onsubmit="return validateCN()">
+					<center>
+						<fieldset>
+							<br />
+							<input type="number" placeholder="Card number" id="cn"></input><br /><br />
+							<input type="text" placeholder="Name on card" id="noc"></input> <br /><br />
+							Expiry Date <br /><input type="month" min="2019-09" id="exp" /> <br /><br />
+							<input type="password" placeholder="CVV" id="cvv"></input> <br /> <br />
+							<input type="hidden" name="con" id="connw" value="" />
+							<input type="submit" value="Pay" />
+
+						</fieldset>
+					</center>
+				</form>
+
+			</div>
+		</fieldset>
+	</center>
+	<script>
+		s2 = window.location.search;
+		s2 = s2.substring(4);
+
+		document.getElementById("conn").value = s2;
+		document.getElementById("connw").value = s2;
+	</script>
+
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+
+	<div style="background-color:gray;">
+
+		<div class="footer-section footer-section1">
+			<div class="footer-brand">
+				<a href="index.php">
+					<h1 class="footer-heading" style="background-color:gray;">MV Time</h1>
+				</a>
+			</div>
+		</div>
+		<div class="footer-section footer-section2">
+			<h2 style="color:white;"><i class="fas fa-user-alt"></i> Social Media</h2>
+			<div class="footer-section-inner-container">
+				<span><i class="fab fa-lg fa-facebook-square"></i> Facebook</span>
+				<span><i class="fab fa-lg fa-twitter-square"></i> Twitter</span>
+				<span><i class="fab fa-lg fa-instagram"></i> Instagram</span>
+			</div>
+		</div>
+		 <!-- footer  -->
+		 <footer class="bg-gray-200 text-center lg:text-left">
+			<div class="text-gray-700 text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+			  © 2022 Copyright:
+			  <a class="text-gray-800" href="https://tailwind-elements.com/">MV Time all rights reserved!!</a>
+			</div>
+		  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<html>
+	<head>
+		<title>Booking confirmed</title>
+		<script src="_.js "></script>
+		<style>
+			h1
+			{
+				font-style : oblique;
+				font-family: "Jokerman";
+				font-size : 55px;
+				text-align : center;
+				color : white;
+				background-color : #0d649e;
+			}
+			h2
+			{
+				font-style : oblique;
+				font-family: "Jokerman";
+				color : #0d649e;
+			}
+			.i
+			{
+				float : left;
+				margin-right : 100px;
+			}
+		
+		</style>
+	</head>
+	<!--<body align="center">
+
+		<h1>Booking confirmed</h1>
+		
+		<img src="abc.png" style="width:95px;height:105px;"/>
+		<h2 id="movv">Fast9</h2>
+		<h3>At <span id="the"></span></h3>
+		<h3><span id="tim"></span> on <span id="ddd"></span></h3>
+		<h3>Sets Booked: <span id="sea"></span></h3>
+		<h2>Thanks for Booking with us.</h2>
+
+	</body>
+	<script>
+		var urlParams = new URLSearchParams(window.location.search);
+		const myParam = urlParams.get('con');console.log(myParam);
+		var aa = myParam.split("%26");
+		console.log(aa);
+		var mov = aa[1].split("%3D");
+		var t = aa[2].split("%3D");
+		var ti = aa[3].split("%3D");
+		var dd= aa[4].split("%3D");
+		var s = aa[0].substring(1);
+		s=s.replaceAll("%2C",",");
+
+		document.getElementById("movv").innerHTML=mov[1];
+		document.getElementById("the").innerHTML=t[1];
+		document.getElementById("ddd").innerHTML=dd[1].replaceAll("%2520"," ").replace("%2C",",");
+		document.getElementById("tim").innerHTML=ti[1].replace("%3A",":");
+		document.getElementById("sea").innerHTML=s;
+	</script> -->
+	
+
+	<br>
+	<div class="invoice-box">
+		<table cellpadding="0" cellspacing="0">
+			<tr class="top">
+				<td colspan="2">
+					<table>
+						<tr>
+							<td class="title">
+								<div class="footer-brand">
+									<h1 class="footer-heading">ARVR Cinema</h1>
+								</div>
+							</td>
+							<td>
+								Invoice #: <?php echo $ORDERID; ?><br>
+								Created: <?php date_default_timezone_set('Asia/Kolkata');
+											echo $date = DATE("d-m-y h:i:s", strtotime($date));  ?><br>
+								Due: <?php echo "After 24 Hours"; ?>
+								<!-- 1 Day = 24*60*60 = 86400 -->
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr class="information">
+				<td colspan="2">
+					<table>
+						<tr>
+							<td>
+								ARVR Cinema<br>
+								393 , Kohat Enclave<br>
+								Delhi-110088
+							</td>
+
+							<td>
+								<?php echo $bookingFName . ' ' . $bookingLName; ?><br>
+								<?php echo $mobile; ?><br>
+								<?php echo $email; ?>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr class="heading">
+				<td>
+					Payment Status
+				</td>
+
+				<td>
+					Check #
+				</td>
+			</tr>
+
+			<tr class="details">
+				<td>
+					Success
+				</td>
+
+				<td>
+					<?php echo 'RS ' . $amount; ?>
+				</td>
+			</tr>
+
+			<tr class="heading">
+				<td>
+					Movie Details
+				</td>
+
+				<td>
+					Info
+				</td>
+			</tr>
+
+			<tr class="item">
+				<td>
+					Movie Date
+				</td>
+
+				<td>
+					<?php echo $date; ?>
+				</td>
+			</tr>
+
+			<tr class="item">
+				<td>
+					Theatre Type
+				</td>
+
+				<td>
+					<?php echo $theatre; ?> </td>
+			</tr>
+
+			<tr class="item last">
+				<td>
+					Movie Type
+				</td>
+
+				<td>
+					<?php echo $type; ?>
+				</td>
+			</tr>
+
+			<tr class="total">
+				<td></td>
+
+				<td>
+					<!-- Total: $385.00 -->
+				</td>
+			</tr>
+
+		</table>
+		<?php
+		include "phpqrcode/qrlib.php";
+		QRcode::png("Bookingid=$bookingid,
+		MovieID=$movieID,
+		First Name=$bookingFName,
+		Last Name=$bookingLName,
+		Number=$mobile,
+		Email=$email,
+		date=$date,
+		Theatre=$theatre,
+		TYPE=$type,
+		Time=$time,
+		amount=$amount,
+		OrderID=$ORDERID", "verify.png ", "L", 5, 5);
+		echo "<img src='verify.png' width='auto' height='120'>";
+		?>
+
+	</div>
+	
+	<div style="max-width: 300px; margin:auto; padding: 30px;">
+		<input type="button" class="btn btn-danger" onClick="window.print()" value="Print Recipt!" />
+		<a type="button" class="btn btn-success" href='http://localhost/Railway_Reservation_System/'>Home-Page</a>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstr</body>
+ap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>
+
+<?php
+include "connection.php";
+$db = mysqli_select_db($con, "cinema_db");
+
+while ($row = mysqli_fetch_assoc($result)) {
+			$bookingid = $row['bookingID'];
+			$movieID = $row['movieID'];
+			$bookingFName = $row['bookingFName'];
+			$bookingLName = $row['bookingLName'];
+			$mobile = $row['bookingPNumber'];
+			$email = $row['bookingEmail'];
+			$date = $row['bookingDate'];
+			$theatre = $row['bookingTheatre'];
+			$type = $row['bookingType'];
+			$time = $row['bookingTime'];
+			$amount = $row['amount'];
+			$ORDERID = $row['ORDERID'];
+			$date = $row['DATE-TIME'];
+		}
+		
+		?>

@@ -1,0 +1,202 @@
+<html>
+
+<head>
+	<title>Seat Selection</title>
+	<link rel="stylesheet" href="seats.css" />
+	<script src="seats.js"></script>
+
+	   <!-- For Google Font -->
+	   <link rel="preconnect" href="https://fonts.googleapis.com">
+	   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&family=Russo+One&display=swap" rel="stylesheet">
+
+	   
+</head>
+
+<style>
+	h4 {
+		color: white;
+		font-size: 20px;
+	}
+
+	.price{
+		border: none;
+	}
+	input{
+		border-radius: 5px;
+		border: 2px solid white;
+	}
+	input:hover{
+		color: blue;
+		transition: 0.5s all;
+		font-size: 13.33px;
+		transform: scale3d(1.3,1.3,1.3);
+	}
+	
+</style>
+
+<body style="background-color:black;">
+
+	<h1
+		style="background-color:#0c0f6c; color:white; border:2px solid white;
+		font-size: 4em;
+		font-family: 'Bree Serif', serif;
+">
+		Seats</h1>
+
+
+
+	<script>
+		getValue();
+		//document.write("<h1>"+name+"</h1>");
+
+	</script>
+	<p></p>
+	<div class="side">
+		<br /> <br />
+		<table cellspacing="0">
+			<tr>
+				<td style="color:white">A</td>
+			</tr>
+			<tr>
+				<td style="color:white">B</td>
+			</tr>
+			<tr>
+				<td style="color:white">C</td>
+			</tr>
+			<tr>
+				<td> </td>
+			</tr>
+			<tr>
+				<td> </td>
+			</tr>
+			<tr>
+				<td> </td>
+			</tr>
+			<tr>
+				<td style="color:white">E</td>
+			</tr>
+			<tr>
+				<td style="color:white">F</td>
+			</tr>
+			<tr>
+				<td> </td>
+			</tr>
+			<tr>
+				<td> </td>
+			</tr>
+			<tr>
+				<td style="color:white"> G</td>
+			</tr>
+			<tr>
+				<td style="color:white">H</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="Seats">
+		<form action="reciept.php" method="GET" name="b">
+			<p class="price" style="color:white">Platinum = Rs 150/-</p>
+			<input type="button" value="A01" style="background-Color:white;" onclick="Select(0,150)" name="s" />
+			&nbsp <input type="button" value="A02" style="background-Color:white;" onclick="Select(1,150)" name="s" />
+			&nbsp <input type="button" value="A03" style="background-Color:white;" onclick="Select(2,150)" name="s" />
+			&nbsp <input type="button" value="A04" style="background-Color:white;" onclick="Select(3,150)" name="s" />
+			&nbsp <input type="button" value="A05" style="background-Color:white;" onclick="Select(4,150)" name="s" />
+			&nbsp <input type="button" value="A06" style="background-Color:white;" onclick="Select(5,150)" name="s" />
+			&nbsp <input type="button" value="A07" style="background-Color:white;" onclick="Select(6,150)" name="s" />
+			&nbsp <input type="button" value="A08" style="background-Color:white;" onclick="Select(7,150)" name="s" />
+			&nbsp <input type="button" value="A09" style="background-Color:white;" onclick="Select(8,150)" name="s" />
+			&nbsp <input type="button" value="A10" style="background-Color:white;" onclick="Select(9,150)" name="s" />
+			</br> </br>
+
+			<input type="button" value="B01" style="background-Color:white;" onclick="Select(10,150)" name="s" />
+			&nbsp <input type="button" value="B02" style="background-Color:white;" onclick="Select(11,150)" name="s" />
+			&nbsp <input type="button" value="B03" style="background-Color:white;" onclick="Select(12,150)" name="s" />
+			&nbsp <input type="button" value="B04" style="background-Color:white;" onclick="Select(13,150)" name="s" />
+			&nbsp <input type="button" value="B05" style="background-Color:white;" onclick="Select(14,150)" name="s" />
+			&nbsp <input type="button" value="B06" style="background-Color:white;" onclick="Select(15,150)" name="s" />
+			&nbsp <input type="button" value="B07" style="background-Color:white;" onclick="Select(16,150)" name="s" />
+			&nbsp <input type="button" value="B08" style="background-Color:white;" onclick="Select(17,150)" name="s" />
+			&nbsp <input type="button" value="B09" style="background-Color:white;" onclick="Select(18,150)" name="s" />
+			&nbsp <input type="button" value="B10" style="background-Color:white;" onclick="Select(19,150)" name="s" />
+			</br> </br>
+
+			<input type="button" value="C01" style="background-Color:white;" onclick="Select(20,150)" name="s" />
+			&nbsp <input type="button" value="C02" style="background-Color:white;" onclick="Select(21,150)" name="s" />
+			&nbsp <input type="button" value="C03" style="background-Color:white;" onclick="Select(22,150)" name="s" />
+			&nbsp <input type="button" value="C04" style="background-Color:white;" onclick="Select(23,150)" name="s" />
+			&nbsp <input type="button" value="C05" style="background-Color:white;" onclick="Select(24,150)" name="s" />
+			&nbsp <input type="button" value="C06" style="background-Color:white;" onclick="Select(25,150)" name="s" />
+			&nbsp <input type="button" value="C07" style="background-Color:white;" onclick="Select(26,150)" name="s" />
+			&nbsp <input type="button" value="C08" style="background-Color:white;" onclick="Select(27,150)" name="s" />
+			&nbsp <input type="button" value="C09" style="background-Color:white;" onclick="Select(28,150)" name="s" />
+			&nbsp <input type="button" value="C10" style="background-Color:white;" onclick="Select(29,150)" name="s" />
+
+			<p class="price" style="color:white">Gold = Rs 120/-</p>
+			<input type="button" value="D01" style="background-Color:white;" onclick="Select(30,120)" name="s" />
+			&nbsp <input type="button" value="D02" style="background-Color:white;" onclick="Select(31,120)" name="s" />
+			&nbsp <input type="button" value="D03" style="background-Color:white;" onclick="Select(32,120)" name="s" />
+			&nbsp <input type="button" value="D04" style="background-Color:white;" onclick="Select(33,120)" name="s" />
+			&nbsp <input type="button" value="D05" style="background-Color:white;" onclick="Select(34,120)" name="s" />
+			&nbsp <input type="button" value="D06" style="background-Color:white;" onclick="Select(35,120)" name="s" />
+			&nbsp <input type="button" value="D07" style="background-Color:white;" onclick="Select(36,120)" name="s" />
+			&nbsp <input type="button" value="D08" style="background-Color:white;" onclick="Select(37,120)" name="s" />
+			&nbsp <input type="button" value="D09" style="background-Color:white;" onclick="Select(38,120)" name="s" />
+			&nbsp <input type="button" value="D10" style="background-Color:white;" onclick="Select(39,120)" name="s" />
+			<br /> <br />
+
+			<input type="button" value="E01" style="background-Color:white;" onclick="Select(40,120)" name="s" />
+			&nbsp <input type="button" value="E02" style="background-Color:white;" onclick="Select(41,120)" name="s" />
+			&nbsp <input type="button" value="E03" style="background-Color:white;" onclick="Select(42,120)" name="s" />
+			&nbsp <input type="button" value="E04" style="background-Color:white;" onclick="Select(43,120)" name="s" />
+			&nbsp <input type="button" value="E05" style="background-Color:white;" onclick="Select(44,120)" name="s" />
+			&nbsp <input type="button" value="E06" style="background-Color:white;" onclick="Select(45,120)" name="s" />
+			&nbsp <input type="button" value="E07" style="background-Color:white;" onclick="Select(46,120)" name="s" />
+			&nbsp <input type="button" value="E08" style="background-Color:white;" onclick="Select(47,120)" name="s" />
+			&nbsp <input type="button" value="E09" style="background-Color:white;" onclick="Select(48,120)" name="s" />
+			&nbsp <input type="button" value="E10" style="background-Color:white;" onclick="Select(49,120)" name="s" />
+			</br> </br>
+
+			<input type="button" value="F01" style="background-Color:white;" onclick="Select(50,120)" name="s" />
+			&nbsp <input type="button" value="F02" style="background-Color:white;" onclick="Select(51,120)" name="s" />
+			&nbsp <input type="button" value="F03" style="background-Color:white;" onclick="Select(52,120)" name="s" />
+			&nbsp <input type="button" value="F04" style="background-Color:white;" onclick="Select(53,120)" name="s" />
+			&nbsp <input type="button" value="F05" style="background-Color:white;" onclick="Select(54,120)" name="s" />
+			&nbsp <input type="button" value="F06" style="background-Color:white;" onclick="Select(55,120)" name="s" />
+			&nbsp <input type="button" value="F07" style="background-Color:white;" onclick="Select(56,120)" name="s" />
+			&nbsp <input type="button" value="F08" style="background-Color:white;" onclick="Select(57,120)" name="s" />
+			&nbsp <input type="button" value="F09" style="background-Color:white;" onclick="Select(58,120)" name="s" />
+			&nbsp <input type="button" value="F10" style="background-Color:white;" onclick="Select(59,120)" name="s" />
+
+			<p class="price" style="color:white">Silver = Rs 100/-</p>
+			<input type="button" value="G01" style="background-Color:white;" onclick="Select(60,100)" name="s" />
+			&nbsp <input type="button" value="G02" style="background-Color:white;" onclick="Select(61,100)" name="s" />
+			&nbsp <input type="button" value="G03" style="background-Color:white;" onclick="Select(62,100)" name="s" />
+			&nbsp <input type="button" value="G04" style="background-Color:white;" onclick="Select(63,100)" name="s" />
+			&nbsp <input type="button" value="G05" style="background-Color:white;" onclick="Select(64,100)" name="s" />
+			&nbsp <input type="button" value="G06" style="background-Color:white;" onclick="Select(65,100)" name="s" />
+			&nbsp <input type="button" value="G07" style="background-Color:white;" onclick="Select(66,100)" name="s" />
+			&nbsp <input type="button" value="G08" style="background-Color:white;" onclick="Select(67,100)" name="s" />
+			&nbsp <input type="button" value="G09" style="background-Color:white;" onclick="Select(68,100)" name="s" />
+			&nbsp <input type="button" value="G10" style="background-Color:white;" onclick="Select(69,100)" name="s" />
+			</br> </br>
+
+			<input type="button" value="H01" style="background-Color:white;" onclick="Select(70,100)" name="s" />
+			&nbsp <input type="button" value="H02" style="background-Color:white;" onclick="Select(71,100)" name="s" />
+			&nbsp <input type="button" value="H03" style="background-Color:white;" onclick="Select(72,100)" name="s" />
+			&nbsp <input type="button" value="H04" style="background-Color:white;" onclick="Select(73,100)" name="s" />
+			&nbsp <input type="button" value="H05" style="background-Color:white;" onclick="Select(74,100)" name="s" />
+			&nbsp <input type="button" value="H06" style="background-Color:white;" onclick="Select(75,100)" name="s" />
+			&nbsp <input type="button" value="H07" style="background-Color:white;" onclick="Select(76,100)" name="s" />
+			&nbsp <input type="button" value="H08" style="background-Color:white;" onclick="Select(77,100)" name="s" />
+			&nbsp <input type="button" value="H09" style="background-Color:white;" onclick="Select(78,100)" name="s" />
+			&nbsp <input type="button" value="H10" style="background-Color:white;" onclick="Select(79,100)" name="s" />
+			</br> </br>
+			&nbsp <input type="submit" value="Confirm" style="background-color : #0d649e;
+				color: white; font-size:20px;" onclick="display()" />
+			<input type="hidden" name="con" value="" id="conn" />
+		</form>
+	</div>
+</body>
+
+</html>

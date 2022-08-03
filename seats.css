@@ -1,0 +1,50 @@
+body
+{
+	text-align : center;
+	overflow : hidden;
+}
+.side
+{
+	width : 100px;
+	position : fixed;
+	font-size : 20px;
+	
+}
+.dw
+{
+	font-family : "Jokerman";
+	font-size : 40px;
+	display : inline;
+	color : white;
+	background-color : #0d649e;
+}
+.seats
+{
+	font-size : 20px;
+}
+input
+{
+	border-color : grey;
+
+}
+input:hover
+{
+	color : red;
+	/* font-size : 20px; */
+}
+td
+{
+	padding-bottom : 22px;
+	text-align : center;
+	font-size : 20px;
+	width : 100px;
+}
+.price
+{
+	border-bottom : solid;
+	border-top : solid;
+}
+h4
+{
+	border : solid;
+}
